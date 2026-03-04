@@ -76,30 +76,22 @@ type();
 /* ════════════════════════════════════════
    SCROLL REVEAL
 ════════════════════════════════════════ */
-const revealObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0 }   // fire as soon as ANY pixel is visible
-);
+// Add js-animate to body BEFORE paint so elements start hidden for animation
+document.body.classList.add('js-animate');
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-// Fallback: force-reveal anything already in the viewport on load
-// (handles non-scrolling pages where the observer may not re-fire)
-window.addEventListener('load', () => {
+function revealVisible() {
   document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+    if (rect.top < window.innerHeight + 20 && rect.bottom > 0) {
       el.classList.add('visible');
     }
   });
-});
+}
+
+// Run immediately, on scroll, and on load (covers every timing edge case)
+revealVisible();
+window.addEventListener('scroll', revealVisible, { passive: true });
+window.addEventListener('load', revealVisible);
 
 /* ════════════════════════════════════════
    CONTACT FORM (static — Formspree ready)

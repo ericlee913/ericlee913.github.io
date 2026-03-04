@@ -88,13 +88,18 @@ img { max-width: 100%; display: block; }
 }
 .btn-sm { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
 
-/* Reveal animation */
+/* Reveal animation
+   Content is visible by default.
+   When JS runs it adds .js-animate to <body>, which re-hides elements
+   so the IntersectionObserver can fade them in cleanly. */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.reveal.visible {
+body.js-animate .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+body.js-animate .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
