@@ -85,10 +85,21 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0 }   // fire as soon as ANY pixel is visible
 );
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Fallback: force-reveal anything already in the viewport on load
+// (handles non-scrolling pages where the observer may not re-fire)
+window.addEventListener('load', () => {
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    }
+  });
+});
 
 /* ════════════════════════════════════════
    CONTACT FORM (static — Formspree ready)
