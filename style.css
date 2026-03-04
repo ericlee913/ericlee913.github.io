@@ -231,21 +231,20 @@ img { max-width: 100%; display: block; }
 }
 .hero-socials a:hover { color: var(--accent); transform: translateY(-3px); }
 
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 2rem; left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  animation: float 2s ease-in-out infinite;
+/* scroll hint removed — multi-page layout */
+
+/* ════════════════════════════════════════
+   MULTI-PAGE WRAPPER
+════════════════════════════════════════ */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes float {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(-6px); }
+
+.page {
+  min-height: calc(100vh - 64px - 80px); /* viewport minus navbar & footer */
+  padding: 5rem 0 4rem;
+  animation: pageIn 0.45s ease both;
 }
 
 /* ════════════════════════════════════════
@@ -273,6 +272,13 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   font-size: 5rem;
   color: var(--text-muted);
+}
+/* swap avatar-placeholder with <img class="avatar-img"> when you have a photo */
+.avatar-img {
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
 }
 .about-text p { color: var(--text-muted); margin-bottom: 1rem; }
 .skills h3 { font-size: 1rem; margin-bottom: 0.8rem; color: var(--text); }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Junwoo Lee | Home</title>
+    <title>Junwoo Lee | About</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -26,39 +26,46 @@
       </button>
     </nav>
 
-    <!-- ──────────────── HERO ──────────────── -->
-    <section id="hero">
-      <div class="hero-content">
-        <p class="hero-greeting">Hi, I'm</p>
-        <h1 class="hero-name">Junwoo Lee</h1>
-        <h2 class="hero-title typing" id="typing-target"></h2>
-        <p class="hero-sub">
-          I build clean, scalable software and love turning complex problems
-          into elegant solutions.
-        </p>
-        <div class="hero-buttons">
-          <a href="projects.html" class="btn btn-primary">See My Work</a>
-          <a href="contact.html" class="btn btn-outline">Get In Touch</a>
-        </div>
-        <div class="hero-socials">
-          <a
-            href="https://github.com/ericlee913"
-            target="_blank"
-            aria-label="GitHub"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://linkedin.com/in/junwoolee"
-            target="_blank"
-            aria-label="LinkedIn"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="mailto:junwoo@example.com" aria-label="Email"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
+    <!-- ──────────────── PAGE CONTENT ──────────────── -->
+    <main class="page">
+      <div class="container">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid reveal">
+          <div class="about-avatar">
+            <!-- Replace the div below with an <img> once you have a photo:      -->
+            <!-- <img src="images/profile.jpg" alt="Junwoo Lee" class="avatar-img" /> -->
+            <div class="avatar-placeholder">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">Download Resume</a>
+          </div>
+          <div class="about-text">
+            <p>
+              I'm a software engineer with a passion for building products that
+              live on the web. I enjoy working across the full stack, from
+              designing intuitive UIs to engineering robust back-end services.
+            </p>
+            <p>
+              When I'm not coding, you'll find me exploring new technologies,
+              contributing to open-source projects, or hiking with my camera.
+            </p>
+            <div class="skills">
+              <h3>Technologies I Work With</h3>
+              <ul class="skills-list">
+                <li>Python</li>
+                <li>JavaScript / TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Java</li>
+                <li>SQL / PostgreSQL</li>
+                <li>Docker</li>
+                <li>Git / CI-CD</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- ──────────────── FOOTER ──────────────── -->
     <footer>

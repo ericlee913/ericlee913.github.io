@@ -3,20 +3,17 @@
 ════════════════════════════════════════ */
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-links a');
-const sections = document.querySelectorAll('section[id]');
 
+// Highlight the nav link that matches the current page
+const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+navLinks.forEach(a => {
+  const linkFile = a.getAttribute('href').split('/').pop();
+  a.classList.toggle('active', linkFile === currentFile);
+});
+
+// Scrolled navbar style
 window.addEventListener('scroll', () => {
-  // Scrolled style
   navbar.classList.toggle('scrolled', window.scrollY > 40);
-
-  // Active nav link
-  let current = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-  });
-  navLinks.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
-  });
 });
 
 /* ════════════════════════════════════════
