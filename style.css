@@ -181,14 +181,15 @@ body.js-animate .reveal.visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   padding: 0 max(2rem, 8vw);
   position: relative;
   background:
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(88,166,255,0.12) 0%, transparent 70%),
     var(--bg);
 }
-.hero-content { max-width: 700px; }
+.hero-content { max-width: 720px; text-align: center; }
 .hero-greeting {
   color: var(--accent);
   font-size: 1.1rem;
@@ -227,8 +228,8 @@ body.js-animate .reveal.visible {
   max-width: 540px;
   margin-bottom: 2rem;
 }
-.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-.hero-socials { display: flex; gap: 1.2rem; }
+.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center; }
+.hero-socials { display: flex; gap: 1.2rem; justify-content: center; }
 .hero-socials a {
   font-size: 1.4rem;
   color: var(--text-muted);
@@ -529,7 +530,7 @@ footer p { color: var(--text-muted); font-size: 0.9rem; }
   .nav-links a { font-size: 1rem; }
 
   #hero { padding: 0 1.5rem; }
-  .hero-buttons { flex-direction: column; align-items: flex-start; }
+  .hero-buttons { flex-direction: column; align-items: center; }
 
   .about-grid {
     grid-template-columns: 1fr;

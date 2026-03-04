@@ -40,9 +40,12 @@ navLinksList.querySelectorAll('a').forEach(link => {
 ════════════════════════════════════════ */
 const titles = [
   'Software Engineer',
-  'Full-Stack Developer',
+  'Cybersecurity Enthusiast',
+  'Tutor & Mentor',
   'Problem Solver',
-  'Open-Source Enthusiast',
+  'Full-Stack Developer',
+  'Lifelong Learner',
+  'Open-Source Contributor',
 ];
 
 const target = document.getElementById('typing-target');
