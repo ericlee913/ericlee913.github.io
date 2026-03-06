@@ -29,99 +29,273 @@
     <!-- ──────────────── PAGE CONTENT ──────────────── -->
     <main class="page">
       <div class="container">
+
+        <!-- ══ WORK EXPERIENCE ══ -->
         <h2 class="section-title">Work <span>Experience</span></h2>
         <div class="timeline">
 
-          <!-- Job 1 -->
+          <!-- Software Engineering Intern -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
-            <div class="timeline-card">
+            <div class="timeline-card exp-card" data-panel="panel-swe">
               <div class="timeline-header">
                 <div>
-                  <h3 class="job-title">Software Engineer Intern</h3>
-                  <p class="job-company">Acme Corporation &mdash; New York, NY</p>
+                  <h3 class="job-title">Software Engineering Intern</h3>
+                  <p class="job-company">
+                    <i class="fa-solid fa-building"></i>&nbsp;[Company Name] &mdash; [Location]
+                  </p>
                 </div>
-                <span class="job-date">Jun 2025 – Aug 2025</span>
+                <div class="exp-header-right">
+                  <span class="job-date">[Month Year &ndash; Month Year]</span>
+                  <i class="fa-solid fa-arrow-right exp-arrow"></i>
+                </div>
               </div>
-              <ul class="job-bullets">
-                <li>
-                  Developed REST APIs in Node.js serving 10 k+ daily requests,
-                  reducing response latency by 30%.
-                </li>
-                <li>
-                  Collaborated with the front-end team to integrate React
-                  components with a GraphQL back-end.
-                </li>
-                <li>
-                  Wrote unit and integration tests, increasing code coverage
-                  from 62% to 85%.
-                </li>
-              </ul>
               <div class="job-tags">
-                <span>Node.js</span><span>React</span><span>GraphQL</span
-                ><span>PostgreSQL</span>
+                <span>Python</span><span>JavaScript</span><span>React</span><span>Git</span>
               </div>
             </div>
           </div>
 
-          <!-- Job 2 -->
+          <!-- Data & Engineering Intern -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
-            <div class="timeline-card">
+            <div class="timeline-card exp-card" data-panel="panel-data">
               <div class="timeline-header">
                 <div>
-                  <h3 class="job-title">Teaching Assistant – Data Structures</h3>
-                  <p class="job-company">State University &mdash; [City], [State]</p>
+                  <h3 class="job-title">Data &amp; Engineering Intern</h3>
+                  <p class="job-company">
+                    <i class="fa-solid fa-building"></i>&nbsp;[Company Name] &mdash; [Location]
+                  </p>
                 </div>
-                <span class="job-date">Sep 2024 – May 2025</span>
+                <div class="exp-header-right">
+                  <span class="job-date">[Month Year &ndash; Month Year]</span>
+                  <i class="fa-solid fa-arrow-right exp-arrow"></i>
+                </div>
               </div>
-              <ul class="job-bullets">
-                <li>
-                  Held weekly office hours for 60+ students, clarifying
-                  algorithm design and complexity analysis.
-                </li>
-                <li>
-                  Graded assignments and provided constructive feedback on
-                  Java implementations.
-                </li>
-              </ul>
               <div class="job-tags">
-                <span>Java</span><span>Algorithms</span><span>Mentoring</span>
+                <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>Docker</span>
               </div>
             </div>
           </div>
 
-          <!-- Job 3 -->
+          <!-- Tutor -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
-            <div class="timeline-card">
+            <div class="timeline-card exp-card" data-panel="panel-tutor">
               <div class="timeline-header">
                 <div>
-                  <h3 class="job-title">Freelance Web Developer</h3>
-                  <p class="job-company">Self-employed &mdash; Remote</p>
+                  <h3 class="job-title">Private Tutor</h3>
+                  <p class="job-company">
+                    <i class="fa-solid fa-chalkboard-user"></i>&nbsp;Self-employed &mdash; Singapore / Remote
+                  </p>
                 </div>
-                <span class="job-date">Jan 2024 – Present</span>
+                <div class="exp-header-right">
+                  <span class="job-date">[Month Year &ndash; Present]</span>
+                  <i class="fa-solid fa-arrow-right exp-arrow"></i>
+                </div>
               </div>
-              <ul class="job-bullets">
-                <li>
-                  Designed and delivered responsive websites for 5+ small
-                  businesses, improving their online presence.
-                </li>
-                <li>
-                  Managed end-to-end project lifecycle: scoping, design,
-                  development, and deployment.
-                </li>
-              </ul>
               <div class="job-tags">
-                <span>HTML/CSS</span><span>JavaScript</span
-                ><span>WordPress</span>
+                <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>Mentoring</span>
               </div>
             </div>
+          </div>
+
+          <!-- IXN Projects (single block) -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot ixn-dot"></div>
+            <div class="timeline-card exp-card" data-panel="panel-ixn">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="job-title">IXN Projects &mdash; UCL Industry Exchange Network</h3>
+                  <p class="job-company">
+                    <i class="fa-solid fa-handshake"></i>&nbsp;University College London &mdash; London, UK
+                  </p>
+                </div>
+                <div class="exp-header-right">
+                  <span class="job-date ixn-badge">3 Projects</span>
+                  <i class="fa-solid fa-arrow-right exp-arrow"></i>
+                </div>
+              </div>
+              <div class="job-tags">
+                <span>GDI Hub</span><span>Soundscape Community</span><span>Esri UK &times; Wheelchair Alliance</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+      </div>
+    </main>
+
+    <!-- ══════════════════════════════════════
+         FULL-SCREEN DETAIL PANELS
+    ══════════════════════════════════════ -->
+
+    <!-- SWE Intern Panel -->
+    <div class="exp-panel" id="panel-swe">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Experience</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">[Month Year &ndash; Month Year]</span>
+            <h1 class="exp-panel-title">Software Engineering Intern</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-building"></i>&nbsp;[Company Name] &mdash; [Location]</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>Python</span><span>JavaScript</span><span>React</span><span>Git</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">Placeholder &mdash; add a short paragraph describing the company and your role.</p>
+          <h3 class="exp-panel-section">Key Responsibilities &amp; Achievements</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Placeholder &mdash; add your bullet points here.</li>
+            <li>Placeholder &mdash; describe a key contribution or achievement.</li>
+            <li>Placeholder &mdash; quantify your impact where possible.</li>
+          </ul>
+          <h3 class="exp-panel-section">Photos</h3>
+          <div class="exp-panel-photos">
+            <!-- Add images here e.g. <div class="exp-panel-photo"><img src="images/..." alt="..." /></div> -->
+            <div class="exp-panel-photo" style="display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.85rem;">Add photos here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data & Eng Intern Panel -->
+    <div class="exp-panel" id="panel-data">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Experience</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">[Month Year &ndash; Month Year]</span>
+            <h1 class="exp-panel-title">Data &amp; Engineering Intern</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-building"></i>&nbsp;[Company Name] &mdash; [Location]</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>Docker</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">Placeholder &mdash; add a short paragraph describing the company and your role.</p>
+          <h3 class="exp-panel-section">Key Responsibilities &amp; Achievements</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Placeholder &mdash; add your bullet points here.</li>
+            <li>Placeholder &mdash; describe a key contribution or achievement.</li>
+            <li>Placeholder &mdash; quantify your impact where possible.</li>
+          </ul>
+          <h3 class="exp-panel-section">Photos</h3>
+          <div class="exp-panel-photos">
+            <div class="exp-panel-photo" style="display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.85rem;">Add photos here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutor Panel -->
+    <div class="exp-panel" id="panel-tutor">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Experience</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">[Month Year &ndash; Present]</span>
+            <h1 class="exp-panel-title">Private Tutor</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Self-employed &mdash; Singapore / Remote</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>Mentoring</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">Placeholder &mdash; add a short paragraph about your tutoring work.</p>
+          <h3 class="exp-panel-section">Key Responsibilities &amp; Achievements</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Placeholder &mdash; describe subjects taught and student outcomes.</li>
+            <li>Placeholder &mdash; mention number of students, grade improvements, etc.</li>
+            <li>Placeholder &mdash; any notable methods or approaches used.</li>
+          </ul>
+          <h3 class="exp-panel-section">Photos</h3>
+          <div class="exp-panel-photos">
+            <div class="exp-panel-photo" style="display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:0.85rem;">Add photos here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IXN Panel -->
+    <div class="exp-panel" id="panel-ixn">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Experience</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date ixn-badge">UCL Industry Exchange Network</span>
+            <h1 class="exp-panel-title" style="margin-top:0.6rem;">IXN Projects</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-handshake"></i>&nbsp;University College London &mdash; London, UK</p>
+            <p class="exp-panel-text" style="margin-top:0.8rem;">
+              Client-facing projects undertaken as part of UCL's IXN programme &mdash; real-world briefs
+              delivered in close collaboration with industry partners.
+            </p>
+          </div>
+          <hr class="exp-panel-divider" />
+
+          <!-- GDI Hub -->
+          <div class="ixn-sub-card">
+            <div class="ixn-sub-header">
+              <div>
+                <h3 class="exp-panel-section" style="margin-top:0;">GDI Hub</h3>
+                <p class="job-company"><i class="fa-solid fa-handshake"></i>&nbsp;Industry Partner</p>
+              </div>
+              <div class="job-tags"><span>Placeholder</span><span>Tech Stack</span></div>
+            </div>
+            <ul class="job-bullets exp-panel-bullets">
+              <li>Placeholder &mdash; describe what the project was about.</li>
+              <li>Placeholder &mdash; your role and responsibilities.</li>
+              <li>Placeholder &mdash; outcome or deliverable.</li>
+            </ul>
+          </div>
+
+          <!-- Soundscape -->
+          <div class="ixn-sub-card">
+            <div class="ixn-sub-header">
+              <div>
+                <h3 class="exp-panel-section" style="margin-top:0;">Soundscape Community</h3>
+                <p class="job-company"><i class="fa-solid fa-handshake"></i>&nbsp;Industry Partner</p>
+              </div>
+              <div class="job-tags"><span>Placeholder</span><span>Tech Stack</span></div>
+            </div>
+            <ul class="job-bullets exp-panel-bullets">
+              <li>Placeholder &mdash; describe what the project was about.</li>
+              <li>Placeholder &mdash; your role and responsibilities.</li>
+              <li>Placeholder &mdash; outcome or deliverable.</li>
+            </ul>
+          </div>
+
+          <!-- Esri UK -->
+          <div class="ixn-sub-card">
+            <div class="ixn-sub-header">
+              <div>
+                <h3 class="exp-panel-section" style="margin-top:0;">Esri UK &times; Wheelchair Alliance</h3>
+                <p class="job-company"><i class="fa-solid fa-handshake"></i>&nbsp;Industry Partner</p>
+              </div>
+              <div class="job-tags"><span>Placeholder</span><span>Tech Stack</span></div>
+            </div>
+            <ul class="job-bullets exp-panel-bullets">
+              <li>Placeholder &mdash; describe what the project was about.</li>
+              <li>Placeholder &mdash; your role and responsibilities.</li>
+              <li>Placeholder &mdash; outcome or deliverable.</li>
+            </ul>
           </div>
 
         </div>
       </div>
-    </main>
+    </div>
 
     <!-- ──────────────── FOOTER ──────────────── -->
     <footer>
@@ -133,10 +307,156 @@
         <a href="https://github.com/ericlee913" target="_blank"
           ><i class="fa-brands fa-github"></i
         ></a>
-        <a href="https://linkedin.com/in/junwoolee" target="_blank"
+        <a href="https://linkedin.com/in/junwoo-leee" target="_blank"
           ><i class="fa-brands fa-linkedin"></i
         ></a>
-        <a href="mailto:junwoo@example.com"
+        <a href="mailto:ljunwoo33@gmail.com"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+    <div class="exp-panel" id="panel-swe">
+      <button class="exp-panel-back" aria-label="Close"><i class="fa-solid fa-arrow-left"></i> Back</button>
+      <div class="exp-panel-content">
+        <span class="job-date" style="margin-bottom:0.5rem;display:inline-block;">[Month Year &ndash; Month Year]</span>
+        <h2 class="exp-panel-title">Software Engineering Intern</h2>
+        <p class="exp-panel-company"><i class="fa-solid fa-building"></i>&nbsp;[Company Name] &mdash; [Location]</p>
+        <div class="job-tags" style="margin:1.2rem 0;">
+          <span>Python</span><span>JavaScript</span><span>React</span><span>Git</span>
+        </div>
+        <h3 class="exp-panel-section">Overview</h3>
+        <p class="exp-panel-text">Placeholder &mdash; add a short paragraph about the company and your role here.</p>
+        <h3 class="exp-panel-section">Key Responsibilities &amp; Achievements</h3>
+        <ul class="job-bullets exp-panel-bullets">
+          <li>Placeholder &mdash; add your bullet points here.</li>
+          <li>Placeholder &mdash; describe a key contribution or achievement.</li>
+          <li>Placeholder &mdash; quantify your impact where possible.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Data & Eng Intern Panel -->
+    <div class="exp-panel" id="panel-data">
+      <button class="exp-panel-back" aria-label="Close"><i class="fa-solid fa-arrow-left"></i> Back</button>
+      <div class="exp-panel-content">
+        <span class="job-date" style="margin-bottom:0.5rem;display:inline-block;">[Month Year &ndash; Month Year]</span>
+        <h2 class="exp-panel-title">Data &amp; Engineering Intern</h2>
+        <p class="exp-panel-company"><i class="fa-solid fa-building"></i>&nbsp;[Company Name] &mdash; [Location]</p>
+        <div class="job-tags" style="margin:1.2rem 0;">
+          <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>Docker</span>
+        </div>
+        <h3 class="exp-panel-section">Overview</h3>
+        <p class="exp-panel-text">Placeholder &mdash; add a short paragraph about the company and your role here.</p>
+        <h3 class="exp-panel-section">Key Responsibilities &amp; Achievements</h3>
+        <ul class="job-bullets exp-panel-bullets">
+          <li>Placeholder &mdash; add your bullet points here.</li>
+          <li>Placeholder &mdash; describe a key contribution or achievement.</li>
+          <li>Placeholder &mdash; quantify your impact where possible.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tutor Panel -->
+    <div class="exp-panel" id="panel-tutor">
+      <button class="exp-panel-back" aria-label="Close"><i class="fa-solid fa-arrow-left"></i> Back</button>
+      <div class="exp-panel-content">
+        <span class="job-date" style="margin-bottom:0.5rem;display:inline-block;">[Month Year &ndash; Present]</span>
+        <h2 class="exp-panel-title">Private Tutor</h2>
+        <p class="exp-panel-company"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Self-employed &mdash; Singapore / Remote</p>
+        <div class="job-tags" style="margin:1.2rem 0;">
+          <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>Mentoring</span>
+        </div>
+        <h3 class="exp-panel-section">Overview</h3>
+        <p class="exp-panel-text">Placeholder &mdash; add a short paragraph about your tutoring work here.</p>
+        <h3 class="exp-panel-section">Key Responsibilities &amp; Achievements</h3>
+        <ul class="job-bullets exp-panel-bullets">
+          <li>Placeholder &mdash; describe subjects taught and student outcomes.</li>
+          <li>Placeholder &mdash; mention number of students, grade improvements, etc.</li>
+          <li>Placeholder &mdash; any notable methods or approaches used.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- IXN Panel -->
+    <div class="exp-panel" id="panel-ixn">
+      <button class="exp-panel-back" aria-label="Close"><i class="fa-solid fa-arrow-left"></i> Back</button>
+      <div class="exp-panel-content">
+        <span class="job-date ixn-badge" style="margin-bottom:0.5rem;display:inline-block;">UCL Industry Exchange Network</span>
+        <h2 class="exp-panel-title">IXN Projects</h2>
+        <p class="exp-panel-text" style="margin-bottom:1.8rem;">
+          Client-facing projects undertaken as part of UCL's IXN programme &mdash; real-world briefs
+          delivered in close collaboration with industry partners.
+        </p>
+
+        <!-- GDI Hub sub-card -->
+        <div class="ixn-sub-card">
+          <div class="ixn-sub-header">
+            <div>
+              <h3 class="exp-panel-section" style="margin-bottom:0.2rem;">GDI Hub</h3>
+              <p class="job-company"><i class="fa-solid fa-handshake"></i>&nbsp;Industry Partner</p>
+            </div>
+            <div class="job-tags"><span>Placeholder</span><span>Tech Stack</span></div>
+          </div>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Placeholder &mdash; describe what the project was about.</li>
+            <li>Placeholder &mdash; your role and responsibilities.</li>
+            <li>Placeholder &mdash; outcome or deliverable.</li>
+          </ul>
+        </div>
+
+        <!-- Soundscape sub-card -->
+        <div class="ixn-sub-card">
+          <div class="ixn-sub-header">
+            <div>
+              <h3 class="exp-panel-section" style="margin-bottom:0.2rem;">Soundscape Community</h3>
+              <p class="job-company"><i class="fa-solid fa-handshake"></i>&nbsp;Industry Partner</p>
+            </div>
+            <div class="job-tags"><span>Placeholder</span><span>Tech Stack</span></div>
+          </div>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Placeholder &mdash; describe what the project was about.</li>
+            <li>Placeholder &mdash; your role and responsibilities.</li>
+            <li>Placeholder &mdash; outcome or deliverable.</li>
+          </ul>
+        </div>
+
+        <!-- Esri sub-card -->
+        <div class="ixn-sub-card">
+          <div class="ixn-sub-header">
+            <div>
+              <h3 class="exp-panel-section" style="margin-bottom:0.2rem;">Esri UK &times; Wheelchair Alliance</h3>
+              <p class="job-company"><i class="fa-solid fa-handshake"></i>&nbsp;Industry Partner</p>
+            </div>
+            <div class="job-tags"><span>Placeholder</span><span>Tech Stack</span></div>
+          </div>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Placeholder &mdash; describe what the project was about.</li>
+            <li>Placeholder &mdash; your role and responsibilities.</li>
+            <li>Placeholder &mdash; outcome or deliverable.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ──────────────── FOOTER ──────────────── -->
+    <footer>
+      <p>
+        Designed &amp; Built by <strong>Junwoo Lee</strong> &copy;
+        <span id="year"></span>
+      </p>
+      <div class="footer-socials">
+        <a href="https://github.com/ericlee913" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://linkedin.com/in/junwoo-leee" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="mailto:ljunwoo33@gmail.com"
           ><i class="fa-solid fa-envelope"></i
         ></a>
       </div>

@@ -493,6 +493,167 @@ body.js-animate .reveal.visible {
 }
 
 /* ════════════════════════════════════════
+   EXPERIENCE CARDS (clickable)
+════════════════════════════════════════ */
+.exp-card {
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.exp-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+  transform: translateX(4px);
+}
+.exp-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-shrink: 0;
+}
+.exp-arrow {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: transform 0.25s ease, color 0.2s;
+  flex-shrink: 0;
+}
+.exp-card:hover .exp-arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+/* IXN dot & badge */
+.timeline-dot.ixn-dot {
+  background: var(--accent2);
+  box-shadow: 0 0 0 4px rgba(188,140,255,0.2);
+}
+.ixn-badge {
+  font-size: 0.78rem;
+  background: rgba(188,140,255,0.12);
+  color: var(--accent2);
+  border: 1px solid rgba(188,140,255,0.3);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ════════════════════════════════════════
+   EXPERIENCE FULL-SCREEN PANEL
+════════════════════════════════════════ */
+.exp-panel {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 999; /* below navbar (1000) so navbar stays on top */
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.exp-panel.is-active {
+  transform: translateY(0);
+}
+/* sticky top bar accounts for the fixed navbar height (~64px) */
+.exp-panel-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(13,17,23,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 68px 2.5rem 0.9rem;  /* 68px pushes content below navbar */
+}
+.exp-panel-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+.exp-panel-back:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.exp-panel-body {
+  padding: 3rem 0 5rem;
+}
+.exp-panel-hero {
+  margin-bottom: 2.5rem;
+}
+.exp-panel-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin: 0.5rem 0 0.4rem;
+  line-height: 1.15;
+}
+.exp-panel-company {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.exp-panel-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+.exp-panel-section {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 2rem 0 0.8rem;
+}
+.exp-panel-text {
+  color: var(--text-muted);
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+.exp-panel-bullets {
+  margin-top: 0.4rem;
+}
+/* photo grid inside panel */
+.exp-panel-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+.exp-panel-photo {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--card);
+}
+.exp-panel-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.exp-panel-photo:hover img { transform: scale(1.05); }
+/* IXN sub-cards inside panel */
+.ixn-sub-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+}
+.ixn-sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ════════════════════════════════════════
    PROJECTS
 ════════════════════════════════════════ */
 .projects-grid {

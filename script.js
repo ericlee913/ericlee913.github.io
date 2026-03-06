@@ -74,7 +74,7 @@ function type() {
 
   setTimeout(type, delay);
 }
-type();
+if (target) type();
 
 /* ════════════════════════════════════════
    SCROLL REVEAL
@@ -97,33 +97,59 @@ window.addEventListener('scroll', revealVisible, { passive: true });
 window.addEventListener('load', revealVisible);
 
 /* ════════════════════════════════════════
+   EXPERIENCE DETAIL PANELS
+════════════════════════════════════════ */
+function openPanel(id) {
+  const panel = document.getElementById(id);
+  if (!panel) return;
+  panel.classList.add('is-active');
+  document.body.style.overflow = 'hidden';
+  panel.scrollTop = 0;
+}
+
+function closeAllPanels() {
+  document.querySelectorAll('.exp-panel.is-active').forEach(p => p.classList.remove('is-active'));
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.exp-card').forEach(card => {
+  card.addEventListener('click', () => openPanel(card.dataset.panel));
+});
+document.querySelectorAll('.exp-panel-back').forEach(btn => {
+  btn.addEventListener('click', closeAllPanels);
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllPanels(); });
+
+/* ════════════════════════════════════════
    CONTACT FORM (static — Formspree ready)
 ════════════════════════════════════════ */
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.textContent = 'Sending…';
+if (form) {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
 
-  // ── To use Formspree, replace the action URL below and remove the setTimeout mock ──
-  // const res = await fetch('https://formspree.io/f/YOUR_ID', {
-  //   method: 'POST',
-  //   headers: { 'Accept': 'application/json' },
-  //   body: new FormData(form),
-  // });
-  // if (res.ok) { ... }
+    // ── To use Formspree, replace the action URL below and remove the setTimeout mock ──
+    // const res = await fetch('https://formspree.io/f/YOUR_ID', {
+    //   method: 'POST',
+    //   headers: { 'Accept': 'application/json' },
+    //   body: new FormData(form),
+    // });
+    // if (res.ok) { ... }
 
-  // Static mock response (remove when wired to Formspree)
-  await new Promise(r => setTimeout(r, 1000));
-  status.textContent = '✓ Message sent! I\'ll get back to you soon.';
-  form.reset();
-  btn.disabled = false;
-  btn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
-  setTimeout(() => (status.textContent = ''), 6000);
-});
+    // Static mock response (remove when wired to Formspree)
+    await new Promise(r => setTimeout(r, 1000));
+    status.textContent = '✓ Message sent! I\'ll get back to you soon.';
+    form.reset();
+    btn.disabled = false;
+    btn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+    setTimeout(() => (status.textContent = ''), 6000);
+  });
+}
 
 /* ════════════════════════════════════════
    FOOTER YEAR
