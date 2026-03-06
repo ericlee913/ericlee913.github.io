@@ -118,7 +118,34 @@ document.querySelectorAll('.exp-card').forEach(card => {
 document.querySelectorAll('.exp-panel-back').forEach(btn => {
   btn.addEventListener('click', closeAllPanels);
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllPanels(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeAllPanels(); closeLightbox(); } });
+
+/* ════════════════════════════════════════
+   LIGHTBOX
+════════════════════════════════════════ */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('is-open');
+}
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('is-open');
+  lightboxImg.src = '';
+}
+
+if (lightbox) {
+  document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+}
+
+document.querySelectorAll('.exp-panel-photo img').forEach(img => {
+  img.addEventListener('click', () => openLightbox(img.src, img.alt));
+});
 
 /* ════════════════════════════════════════
    CONTACT FORM (static — Formspree ready)
