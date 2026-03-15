@@ -392,6 +392,13 @@ body.js-animate .reveal.visible {
   object-fit: cover;
   border: 3px solid var(--accent);
 }
+.about-resume-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  align-items: center;
+}
 .about-text p { color: var(--text-muted); margin-bottom: 1rem; }
 .skills h3 { font-size: 1rem; margin-bottom: 0.8rem; color: var(--text); }
 .skills-list {
@@ -636,6 +643,9 @@ body.js-animate .reveal.visible {
   border-radius: 10px;
   overflow: hidden;
   background: var(--card);
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
 }
 .exp-panel-photo img {
   width: 100%;
@@ -646,6 +656,47 @@ body.js-animate .reveal.visible {
   transition: opacity 0.2s;
 }
 .exp-panel-photo img:hover { opacity: 0.85; }
+
+/* ── Paper Preview ── */
+.paper-preview-link {
+  display: block;
+  text-decoration: none;
+  margin-top: 0.8rem;
+  max-width: 560px;
+}
+.paper-preview-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.paper-preview-img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.paper-preview-wrap:hover .paper-preview-img {
+  filter: brightness(0.35);
+  transform: scale(1.02);
+}
+.paper-preview-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.paper-preview-overlay i { font-size: 2.2rem; color: var(--accent); }
+.paper-preview-wrap:hover .paper-preview-overlay { opacity: 1; }
 
 /* ── Lightbox ── */
 .lightbox-overlay {
@@ -717,10 +768,29 @@ body.js-animate .reveal.visible {
   gap: 0.75rem;
   box-shadow: var(--shadow);
   transition: border-color var(--transition), transform var(--transition);
+  position: relative;
+}
+.project-card::after {
+  content: '\f061'; /* fa-arrow-right */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  bottom: 1.1rem;
+  right: 1.2rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 .project-card:hover {
   border-color: var(--accent);
   transform: translateY(-6px);
+}
+.project-card:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--accent);
 }
 .project-top {
   display: flex;
@@ -782,7 +852,9 @@ body.js-animate .reveal.visible {
 .contact-item a:hover { color: var(--accent); }
 
 /* Form */
-.contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+.contact-form { display: flex; flex-direction: column; gap: 1.1rem; align-items: center; }
+.contact-form .form-group { width: 100%; }
+.contact-form .form-note { width: 100%; }
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 .form-group label { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
 .form-group input,

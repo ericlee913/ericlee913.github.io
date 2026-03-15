@@ -112,7 +112,7 @@ function closeAllPanels() {
   document.body.style.overflow = '';
 }
 
-document.querySelectorAll('.exp-card').forEach(card => {
+document.querySelectorAll('.exp-card, .project-card[data-panel]').forEach(card => {
   card.addEventListener('click', () => openPanel(card.dataset.panel));
 });
 document.querySelectorAll('.exp-panel-back').forEach(btn => {

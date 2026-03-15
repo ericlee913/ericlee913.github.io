@@ -32,111 +32,270 @@
         <h2 class="section-title">My <span>Projects</span></h2>
         <div class="projects-grid">
 
-          <!-- Project 1 -->
-          <div class="project-card reveal">
+          <!-- Conni -->
+          <div class="project-card reveal" data-panel="panel-conni" style="cursor:pointer;">
             <div class="project-top">
-              <i class="fa-solid fa-folder-open project-icon"></i>
+              <i class="fa-solid fa-mobile-screen project-icon"></i>
               <div class="project-links">
-                <a href="#" target="_blank" aria-label="GitHub repo"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <a href="#" target="_blank" aria-label="Live demo"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                ></a>
               </div>
             </div>
-            <h3>DevConnect</h3>
-            <p>
-              A social platform for developers to share projects, collaborate,
-              and find teammates. Features real-time chat and GitHub OAuth.
-            </p>
+            <h3>Conni &mdash; University Community App</h3>
+            <p>A cross-platform mobile app for university students to connect and engage as a campus community. Published on both the App Store and Google Play Store.</p>
             <ul class="project-tags">
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Socket.IO</li>
-              <li>MongoDB</li>
+              <li>React Native</li><li>Expo</li><li>Firebase</li><li>FlutterFlow</li><li>Figma</li>
             </ul>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card reveal">
+          <!-- Literature Review -->
+          <div class="project-card reveal" data-panel="panel-pqc" style="cursor:pointer;">
             <div class="project-top">
-              <i class="fa-solid fa-folder-open project-icon"></i>
-              <div class="project-links">
-                <a href="#" target="_blank" aria-label="GitHub repo"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <a href="#" target="_blank" aria-label="Live demo"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                ></a>
-              </div>
+              <i class="fa-solid fa-book project-icon"></i>
+              <div class="project-links"></div>
             </div>
-            <h3>BudgetWise</h3>
-            <p>
-              A personal finance tracker that visualizes income and expenses with
-              interactive charts and sends monthly email summaries.
-            </p>
+            <h3>Post-Quantum &amp; Quantum Cryptography &mdash; Literature Review</h3>
+            <p>A literature review evaluating PQC and QKD as responses to Shor's Algorithm and HNDL attacks, comparing CRYSTALS-Kyber and BB84 across security foundations and deployment feasibility.</p>
             <ul class="project-tags">
-              <li>Python</li>
-              <li>Flask</li>
-              <li>PostgreSQL</li>
-              <li>Chart.js</li>
+              <li>PQC</li><li>QKD</li><li>CRYSTALS-Kyber</li><li>Research</li>
             </ul>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card reveal">
+          <!-- Grade Tracker -->
+          <div class="project-card reveal" data-panel="panel-grade" style="cursor:pointer;">
             <div class="project-top">
-              <i class="fa-solid fa-folder-open project-icon"></i>
+              <i class="fa-solid fa-graduation-cap project-icon"></i>
               <div class="project-links">
-                <a href="#" target="_blank" aria-label="GitHub repo"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <a href="#" target="_blank" aria-label="Live demo"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                ></a>
+                <a href="https://github.com/ericlee913/grade_tracker_coursework" onclick="event.stopPropagation();" target="_blank" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
               </div>
             </div>
-            <h3>PathfinderAI</h3>
-            <p>
-              A visualization tool for comparing graph traversal algorithms
-              (BFS, DFS, A*, Dijkstra) in real time on a customizable grid.
-            </p>
+            <h3>Professor&rsquo;s Grade Tracker</h3>
+            <p>A full-stack web application enabling professors to manage and track their students&rsquo; grades, with dynamic visualisation and a structured MVC backend.</p>
             <ul class="project-tags">
-              <li>TypeScript</li>
-              <li>React</li>
-              <li>Tailwind CSS</li>
+              <li>Java</li><li>Spring Boot</li><li>React</li><li>JavaScript</li>
             </ul>
           </div>
 
-          <!-- Project 4 -->
-          <div class="project-card reveal">
+          <!-- OOP Coursework -->
+          <div class="project-card reveal" data-panel="panel-oop" style="cursor:pointer;">
             <div class="project-top">
-              <i class="fa-solid fa-folder-open project-icon"></i>
+              <i class="fa-solid fa-hospital project-icon"></i>
               <div class="project-links">
-                <a href="#" target="_blank" aria-label="GitHub repo"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <a href="#" target="_blank" aria-label="Live demo"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                ></a>
+                <a href="https://github.com/ericlee913/java-coursework" onclick="event.stopPropagation();" target="_blank" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
               </div>
             </div>
-            <h3>CLI Task Manager</h3>
-            <p>
-              A lightweight command-line task manager with priority queues,
-              due-date reminders, and JSON-based persistence.
-            </p>
+            <h3>Patient Data Management &mdash; OOP Coursework</h3>
+            <p>A Java web application for viewing, searching, filtering, and visualising patient data from CSV files, following the MVC architecture.</p>
             <ul class="project-tags">
-              <li>Python</li>
-              <li>Click</li>
-              <li>JSON</li>
+              <li>Java</li><li>MVC</li><li>Data Visualisation</li><li>JSON</li>
+            </ul>
+          </div>
+
+          <!-- C Coursework -->
+          <div class="project-card reveal" data-panel="panel-cmaze" style="cursor:pointer;">
+            <div class="project-top">
+              <i class="fa-solid fa-robot project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/ericlee913/C-coursework" onclick="event.stopPropagation();" target="_blank" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Maze-Solving Robot &mdash; C Coursework</h3>
+            <p>An autonomous robot programmed in C to navigate an 8&times;8 grid, locate markers, and return them home using a probability-based movement algorithm and exact-path backtracking.</p>
+            <ul class="project-tags">
+              <li>C</li><li>Algorithms</li><li>Grid Navigation</li>
             </ul>
           </div>
 
         </div>
       </div>
     </main>
+
+    <!-- ══════════════════════════════════════
+         FULL-SCREEN DETAIL PANELS
+    ══════════════════════════════════════ -->
+
+    <!-- Conni Panel -->
+    <div class="exp-panel" id="panel-conni">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Projects</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">Aug 2024 &ndash; Present</span>
+            <h1 class="exp-panel-title">Conni &mdash; University Community App</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-mobile-screen"></i>&nbsp;Personal Project &mdash; Cross-platform Mobile App</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>React Native</span><span>Expo</span><span>Firebase</span><span>FlutterFlow</span><span>Figma</span>
+            </div>
+            <p style="margin-top:1rem;font-size:0.9rem;">
+              <a href="https://www.instagram.com/connicommunity" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:none;">
+                <i class="fa-brands fa-instagram"></i>&nbsp;@connicommunity
+              </a>
+            </p>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">Conni is a cross-platform mobile application built to help university students discover, connect, and engage within their campus community. The project began with a FlutterFlow frontend and Firebase backend, with UI prototyped in Figma. After the initial release, user feedback highlighted the need for greater scalability and developer flexibility, which led to a migration from FlutterFlow to React Native with Expo Go. The app is deployed on both the App Store and Google Play Store.</p>
+          <h3 class="exp-panel-section">Key Highlights</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Prototyped the full app interface in Figma before development, establishing visual design and user flows.</li>
+            <li>Launched an initial release using FlutterFlow as the frontend and Firebase as the backend; collected real-world user feedback post-launch to drive product decisions.</li>
+            <li>Migrated the frontend from FlutterFlow to React Native with Expo Go for improved scalability, code maintainability, and long-term developer flexibility.</li>
+            <li>Implemented Firebase Authentication for secure user identity management and protected access to platform features.</li>
+            <li>Designed backend logic for account verification, content moderation, and real-time data synchronisation, prioritising platform safety in a student-facing environment.</li>
+            <li>Successfully deployed on both the App Store and Google Play Store; led version control through structured Git workflows and conducted user testing sessions to improve usability.</li>
+          </ul>
+          <h3 class="exp-panel-section">Photos</h3>
+          <div class="hobby-photo-grid hobby-photo-grid--wide" style="margin-top:0.8rem;">
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/Conni_screenshot_1.jpeg')" style="cursor:zoom-in;"><img src="images/Conni_screenshot_1.jpeg" alt="Conni app screenshot 1" /></div>
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/Conni_screenshot_2.jpeg')" style="cursor:zoom-in;"><img src="images/Conni_screenshot_2.jpeg" alt="Conni app screenshot 2" /></div>
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/Conni_screenshot_3.png')" style="cursor:zoom-in;"><img src="images/Conni_screenshot_3.png" alt="Conni app screenshot 3" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grade Tracker Panel -->
+    <div class="exp-panel" id="panel-grade">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Projects</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">Sep 2024 &ndash; Dec 2024</span>
+            <h1 class="exp-panel-title">Professor&rsquo;s Grade Tracker</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-graduation-cap"></i>&nbsp;Academic Project &mdash; UCL</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>Java</span><span>Spring Boot</span><span>React</span><span>JavaScript</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">A full-stack web application that allows professors to manage and track student grades. Built with a Spring Boot backend following MVC principles and a React frontend with dynamic grade visualisation.</p>
+          <h3 class="exp-panel-section">Key Highlights</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Created a web application enabling professors to manage and track students&rsquo; grades in a structured, intuitive interface.</li>
+            <li>Designed a Spring Boot backend following MVC principles with clean separation of concerns between controllers, services, and data layers.</li>
+            <li>Implemented a responsive React frontend with dynamic grade visualisation to present student data clearly.</li>
+            <li>Configured Maven build tooling and Node.js frontend pipeline for a smooth developer and build experience.</li>
+          </ul>
+          <h3 class="exp-panel-section">Photos</h3>
+          <div class="hobby-photo-grid hobby-photo-grid--wide" style="margin-top:0.8rem;">
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/Grade_tracker_1.png')" style="cursor:zoom-in;"><img src="images/Grade_tracker_1.png" alt="Grade Tracker screenshot 1" /></div>
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/Grade_tracker_2.png')" style="cursor:zoom-in;"><img src="images/Grade_tracker_2.png" alt="Grade Tracker screenshot 2" /></div>
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/Grade_tracker_3.png')" style="cursor:zoom-in;"><img src="images/Grade_tracker_3.png" alt="Grade Tracker screenshot 3" /></div>
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/Grade_tracker_4.png')" style="cursor:zoom-in;"><img src="images/Grade_tracker_4.png" alt="Grade Tracker screenshot 4" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C Coursework Panel -->
+    <div class="exp-panel" id="panel-cmaze">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Projects</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">Oct 2023</span>
+            <p class="exp-panel-company"><i class="fa-solid fa-code"></i>&nbsp;Principles of Programming &mdash; UCL COMP0002</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>C</span><span>Algorithms</span><span>Grid Navigation</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">A C programming coursework project to build an autonomous robot that navigates an 8&times;8 grid, locates markers scattered among obstacles, and returns each one to a defined home position. All 6 stages of the coursework were completed.</p>
+          <h3 class="exp-panel-section">Key Highlights</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Programmed a robot to navigate a dynamically generated 8&times;8 grid containing 5 obstacles and 3 markers, avoiding walls and collisions throughout.</li>
+            <li>Implemented a probability-based movement algorithm: 80% chance to move forward, 10% each for left/right turns; robot executes a left turn when facing an obstacle or wall.</li>
+            <li>Built an exact-path backtracking mechanism using a 2D array to store movements during marker searches, allowing the robot to retrace its steps precisely when returning home.</li>
+            <li>Structured the codebase across multiple modules: <code>robot.c</code>, <code>animation.c</code>, <code>drawing.c</code>, <code>obstacle.c</code>, <code>marker.c</code>, <code>coordinates.c</code>, and <code>main.c</code>.</li>
+            <li>Handled dynamic obstacle overlap scenarios where coincident random positions reduce the obstacle count, contributing to varied and complex map configurations.</li>
+          </ul>
+          <h3 class="exp-panel-section">Photos</h3>
+          <div class="exp-panel-photos">
+            <div class="exp-panel-photo" style="max-width:480px;margin:0 auto;"><img src="images/C_coursework.png" alt="C coursework maze-solving robot screenshot" onclick="openLightbox('images/C_coursework.png')" style="cursor:zoom-in;" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Literature Review Panel -->
+    <div class="exp-panel" id="panel-pqc">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Projects</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">Sep 2025 &ndash; Jan 2026</span>
+            <h1 class="exp-panel-title">Securing the Future: Post-Quantum &amp; Quantum Cryptography</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-book"></i>&nbsp;Research Methods &mdash; UCL · Literature Review</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>PQC</span><span>QKD</span><span>CRYSTALS-Kyber</span><span>BB84</span><span>NIST</span><span>Research</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">A literature review critically evaluating the two primary cryptographic paradigms emerging in response to the quantum computing threat: Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD). The review examines how Shor's Algorithm renders foundational public-key standards such as RSA and ECC insecure, and assesses the urgency of migration driven by "Harvest Now, Decrypt Later" (HNDL) attacks — where adversaries store today's encrypted traffic to decrypt once quantum capabilities mature. The paper concludes that while QKD offers superior long-term information-theoretic security for high-value critical infrastructure, PQC represents the only scalable and immediately deployable solution.</p>
+          <h3 class="exp-panel-section">Key Highlights</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Analysed the threat posed by Shor's Algorithm to widely deployed public-key systems (RSA, ECC), drawing on a 2025 SandboxAQ survey showing RSA still underpins ~11.5 million public keys on the internet.</li>
+            <li>Examined the HNDL (Harvest Now, Decrypt Later) threat model and applied the Mosca Inequality framework to evaluate the urgency of transitioning to quantum-secure schemes.</li>
+            <li>Studied CRYSTALS-Kyber (lattice-based PQC, NIST standardised): provides computational security compatible with existing classical infrastructure without requiring new hardware.</li>
+            <li>Studied BB84 (QKD): derives information-theoretic security guarantees from the fundamental laws of quantum mechanics, ensuring any interception attempt introduces detectable errors.</li>
+            <li>Conducted a comparative analysis across three dimensions: urgency of adoption, security foundations (computational hardness vs. information-theoretic), and practical deployment feasibility and infrastructure requirements.</li>
+          </ul>
+          <h3 class="exp-panel-section">Read Paper</h3>
+          <a href="Literature_review.pdf" target="_blank" rel="noopener" class="paper-preview-link">
+            <div class="paper-preview-wrap">
+              <img src="images/Literature_review_preview.png" alt="Literature review preview" class="paper-preview-img" />
+              <div class="paper-preview-overlay">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>Read Paper</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OOP Panel -->
+    <div class="exp-panel" id="panel-oop">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Projects</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">Mar 2024</span>
+            <p class="exp-panel-company"><i class="fa-solid fa-code"></i>&nbsp;Object-Oriented Programming &mdash; UCL</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>Java</span><span>MVC</span><span>Data Visualisation</span><span>JSON</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">A Java web application that allows users to interact with patient data stored in CSV files. Follows the Model-View-Controller (MVC) architecture and provides a range of features for browsing, searching, filtering, and visualising patient demographics.</p>
+          <h3 class="exp-panel-section">Key Highlights</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Patient List View: displays a list of patient IDs as hyperlinks; clicking an ID shows full patient details.</li>
+            <li>Search Function: allows keyword search across patient data, returning all matching records with relevant fields.</li>
+            <li>Custom Patient Lists: provides filtered views by criteria including alive/deceased status, gender, and age ranges.</li>
+            <li>Data Visualisation: includes age distribution, gender proportion, and marital status graphs for demographic insight.</li>
+            <li>JSON Export: exports the full patient dataset to a structured JSON file.</li>
+          </ul>
+          <h3 class="exp-panel-section">Photos</h3>
+          <div class="hobby-photo-grid hobby-photo-grid--wide" style="margin-top:0.8rem;">
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/OOP_coursework_1.png')" style="cursor:zoom-in;"><img src="images/OOP_coursework_1.png" alt="OOP coursework screenshot 1" /></div>
+            <div class="hobby-photo-wrap" onclick="openLightbox('images/OOP_coursework_2.png')" style="cursor:zoom-in;"><img src="images/OOP_coursework_2.png" alt="OOP coursework screenshot 2" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ──────────────── FOOTER ──────────────── -->
     <footer>
@@ -156,6 +315,12 @@
         ></a>
       </div>
     </footer>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
 
     <script src="script.js"></script>
   </body>
