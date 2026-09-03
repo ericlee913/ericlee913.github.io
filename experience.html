@@ -34,6 +34,33 @@
         <h2 class="section-title">Work <span>Experience</span></h2>
         <div class="timeline">
 
+          <!-- Structured Products Trading Intern -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card exp-card" data-panel="panel-cfp">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="job-title">Structured Products Trading Intern</h3>
+                  <p class="job-company">
+                    <i class="fa-solid fa-building"></i>&nbsp;CFP Energy &mdash; Structured Derivatives Trading Desk, London
+                  </p>
+                </div>
+                <div class="exp-header-right">
+                  <span class="job-date">Jul 2026 &ndash; Aug 2026</span>
+                  <i class="fa-solid fa-arrow-right exp-arrow"></i>
+                </div>
+              </div>
+              <ul class="card-preview">
+                <li>Built and priced structured commodity derivatives (accumulators) for a live trading book, including the solver that finds the optimal strike and barrier to hit target P&amp;L</li>
+                <li>Replaced a third-party pricing library with a purpose-built, vectorized engine and automated the desk&rsquo;s daily settlement-to-quote pipeline</li>
+                <li>Owned the desk&rsquo;s trading application end to end &mdash; the live book view, contract onboarding, and the suite of pricing tools traders use daily</li>
+              </ul>
+              <div class="job-tags">
+                <span>Python</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>ClickHouse</span><span>QuantLib</span><span>NumPy</span><span>Docker</span><span>Black-76</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Software Engineering Intern -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
@@ -148,6 +175,37 @@
     <!-- ══════════════════════════════════════
          FULL-SCREEN DETAIL PANELS
     ══════════════════════════════════════ -->
+
+    <!-- CFP Energy Panel -->
+    <div class="exp-panel" id="panel-cfp">
+      <div class="exp-panel-topbar">
+        <button class="exp-panel-back"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Experience</button>
+      </div>
+      <div class="exp-panel-body">
+        <div class="container">
+          <div class="exp-panel-hero">
+            <span class="job-date">Jul 2026 &ndash; Aug 2026</span>
+            <h1 class="exp-panel-title">Structured Products Trading Intern</h1>
+            <p class="exp-panel-company"><i class="fa-solid fa-building"></i>&nbsp;CFP Energy &mdash; Structured Derivatives Trading Desk, London</p>
+            <div class="job-tags" style="margin-top:1rem;">
+              <span>Python</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>ClickHouse</span><span>QuantLib</span><span>NumPy</span><span>Docker</span><span>Black-76</span>
+            </div>
+          </div>
+          <hr class="exp-panel-divider" />
+          <h3 class="exp-panel-section">Overview</h3>
+          <p class="exp-panel-text">Interned on CFP Energy&rsquo;s structured derivatives trading desk in London, building the pricing engine, solver, and full-stack trading application the desk uses to price and manage a live book of commodity structured products &mdash; accumulators, barrier options, and vanilla options &mdash; across multiple commodities. Worked the full stack, from the closed-form and numerical pricing models in Python to the React/TypeScript trading UI, with the pricing engine validated against the industry-standard QuantLib library for production-grade correctness and the desk&rsquo;s daily pricing cycle fully automated.</p>
+          <h3 class="exp-panel-section">Key Responsibilities &amp; Achievements</h3>
+          <ul class="job-bullets exp-panel-bullets">
+            <li>Engineered a Python pricing engine for accumulator structures &mdash; a product QuantLib has no native pricer for &mdash; validated it for correctness by replicating the payoff against a QuantLib reconstruction across a bunch of real contracts, then built it fully vectorized so it reprices the same structures fast enough for interactive, real-time use on the Structured Products trading desk.</li>
+            <li>Built the desk&rsquo;s strike/knock-out solver: since a target P&amp;L is one equation with two unknowns, the solver returns a full curve of quotable (strike, barrier) pairs rather than a single answer, with modes to explore the curve or pin either variable.</li>
+            <li>Derived the desk&rsquo;s implied volatility surface directly from settlement option premia &mdash; rather than consuming vendor vol &mdash; applying an American-exercise correction and cross-validating holiday calendars against two independent libraries.</li>
+            <li>Replaced dependence on a third-party pricing library with a vectorized, purpose-built engine and automated the desk&rsquo;s end-to-end daily cycle &mdash; settlement data ingestion, volatility surface rebuild, and a book-wide quote re-solve &mdash; removing what would otherwise be manual, per-position repricing.</li>
+            <li>Designed and built the trading application front to back (React 19 + TypeScript, FastAPI + PostgreSQL/ClickHouse): a live book view pricing the desk&rsquo;s full multi-commodity, multi-product portfolio in one pass, a bulk contract-onboarding workflow that names each blocker rather than silently filtering, and a suite of standalone pricer tools (Black-76, barrier, strip, Monte Carlo).</li>
+            <li>Enforced a strict type boundary between the API&rsquo;s snake_case and the UI&rsquo;s camelCase, mapping every cross-boundary object off a shared interface rather than restating its shape, and built per-row error handling so one bad contract never took down the rest of the book&rsquo;s pricing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- SWE Intern Panel -->
     <div class="exp-panel" id="panel-swe">
@@ -288,7 +346,6 @@
             <div class="hobby-photo-wrap" onclick="openLightbox('images/sys_eng_2.png')" style="cursor:zoom-in;"><img src="images/sys_eng_2.png" alt="IXN project screenshot 2" /></div>
             <div class="hobby-photo-wrap" onclick="openLightbox('images/sys_eng_3.png')" style="cursor:zoom-in;"><img src="images/sys_eng_3.png" alt="IXN project screenshot 3" /></div>
             <div class="hobby-photo-wrap" onclick="openLightbox('images/sys_eng_4.jpeg')" style="cursor:zoom-in;"><img src="images/sys_eng_4.jpeg" alt="IXN project screenshot 4" /></div>
-            <div class="hobby-photo-wrap" onclick="openLightbox('images/sys_eng_5.jpeg')" style="cursor:zoom-in;"><img src="images/sys_eng_5.jpeg" alt="IXN project screenshot 5" /></div>
           </div>
         </div>
       </div>
